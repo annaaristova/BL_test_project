@@ -23,7 +23,7 @@ public class HomePage {
     } 
     
     public SelenideElement weddings2023(){
-        return $(By.id("comp-jlklj51h1label"));
+        return $(By.id("comp-jlklj51h1label")); 
     }
     
     public SelenideElement weddingProgram(){
