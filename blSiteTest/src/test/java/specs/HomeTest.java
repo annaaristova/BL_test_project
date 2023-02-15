@@ -3,7 +3,6 @@ package specs;
 import blsitetest.HomePage;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.open;
 import org.testng.annotations.Test;
 
 
@@ -14,14 +13,14 @@ public class HomeTest {
     public HomeTest() {
     }
 
-    @Test
+    @Test(description = "Test logo and name")
     public void testLogoName(){    
         home.open();
         home.nameElement().shouldBe(visible);
         home.logoElement().shouldBe(visible);
     }
     
-    @Test
+    @Test(description = "Test wedding program and price buttons")
     public void testWeddingProgramAndButtons(){
        
         home.open();
