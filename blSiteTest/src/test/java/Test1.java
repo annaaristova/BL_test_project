@@ -18,6 +18,7 @@ public class Test1 {
         System.out.println(
                 $(By.xpath("//*[@id=\"img_comp-k66l3uf0\"]/img"))
                 .shouldBe(visible));
+        
     }
 }
 

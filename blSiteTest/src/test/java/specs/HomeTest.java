@@ -1,6 +1,6 @@
 package specs;
 
-import Pages.HomePage;
+import blsitetest.HomePage;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
@@ -16,14 +16,16 @@ public class HomeTest {
 
     @Test
     public void testLogoName(){    
-        open("https://www.blacklistband.ru/");
+        home.open();
         home.nameElement().shouldBe(visible);
         home.logoElement().shouldBe(visible);
     }
     
     @Test
     public void testWeddingProgramAndButtons(){
-        open("https://www.blacklistband.ru/light-show-new-year");
+       
+        home.open();
+        home.weddings2023().click();
         home.weddingProgram().shouldBe(visible);
         home.weddingPagePriceButton1().shouldBe(enabled);
         home.weddingPagePriceButton2().shouldBe(enabled);
