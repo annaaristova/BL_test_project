@@ -4,7 +4,7 @@ package specs;
 import blsitetest.steps.MainPageSteps;
 import blsitetest.steps.WeddingPageSteps;
 import org.testng.annotations.Test;
-        
+
 public class WeddingPageTest {
     
     MainPageSteps home = new MainPageSteps();
@@ -13,7 +13,9 @@ public class WeddingPageTest {
     public WeddingPageTest() {
     }
     
-    @Test(description = "Test weddings2023 button, wedding programs div and price buttons") 
+    @Test (description = "Test weddings2023 button on the home page."
+            + "Test wedding programs div visibility on weddings2023 page."
+            + "Test price buttons on weddings2023 page.")
     public void testWedding2023(){
         home.home();
         home.weddings2023(); 

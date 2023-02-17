@@ -1,0 +1,8 @@
+# Covers files to be ignored
+
+# allure-results directory
+/allure-results/
+
+# allure-results directory
+/target/
+

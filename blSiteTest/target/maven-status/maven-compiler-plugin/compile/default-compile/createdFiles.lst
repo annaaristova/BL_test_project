@@ -1,1 +1,6 @@
-blsitetest\BlSiteTest.class
+blsitetest\forms\WeddingsForm.class
+blsitetest\steps\MainPageSteps.class
+blsitetest\forms\HeaderForm.class
+blsitetest\pages\WeddingPage.class
+blsitetest\steps\WeddingPageSteps.class
+blsitetest\pages\MainPage.class
