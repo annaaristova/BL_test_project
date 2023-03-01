@@ -1,8 +1,8 @@
 # Covers files to be ignored
 
-# ignore all directories with the name allure-results
-allure-results/
+# allure-results directory
+/allure-results/
 
-# ignore all directories with the name target
-target/
+# allure-results directory
+/target/
 
