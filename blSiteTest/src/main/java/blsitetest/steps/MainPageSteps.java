@@ -30,4 +30,31 @@ public class MainPageSteps {
     public void weddings2023(){
         $(new MainPage().onHeaderForm().weddings2023).click();
     }
+    
+    @Step("Check youtube link")
+    public void youtube(){
+        $(new MainPage().onHeaderForm().youtube).click();
+    }
+    
+    @Step("Check vkontakte link")
+    public void vkontakte(){
+        $(new MainPage().onHeaderForm().vkontakte).click();
+    }
+    
+    @Step("Check instagram link")
+    public void instagram(){
+        $(new MainPage().onHeaderForm().instagram).click();
+    }
+    
+    @Step("Check facebook link")
+    public void facebook(){
+        $(new MainPage().onHeaderForm().facebook).click();
+    }
+    
+    @Step("Check prices link")
+    public void prices(){
+        $(new MainPage().onHeaderForm().prices).click();
+        $(new MainPage().onPricesDiv().pricesDiv).shouldBe(visible);
+    }
+    
 }

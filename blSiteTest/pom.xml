@@ -17,7 +17,6 @@
         <allure.java.commons>2.17.3</allure.java.commons>
         <allure.testng>2.17.3</allure.testng>
         <maven.surefire.plugin>3.0.0-M7</maven.surefire.plugin>
-        <!--<settings.localRepository>C:\Users\Anna\.m2\repository</settings.localRepository>-->
     </properties>
     
     <dependencies>
