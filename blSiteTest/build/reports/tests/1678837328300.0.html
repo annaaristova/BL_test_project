@@ -1,0 +1,337 @@
+<html ng-app="myApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <base href="/">
+        <meta charset="utf-8">
+        <title>Table Master</title>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="Table Master app">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+		<style> @-ms-viewport { width: device-width; } </style>
+        <link rel="stylesheet" href="styles/index.css">
+        <script id="sentry">
+            (function(c,u,v,n,p,e,z,A,w){function k(a){if(!x){x=!0;var l=u.getElementsByTagName(v)[0],d=u.createElement(v);d.src=A;d.crossorigin="anonymous";d.addEventListener("load",function(){try{c[n]=r;c[p]=t;var b=c[e],d=b.init;b.init=function(a){for(var b in a)Object.prototype.hasOwnProperty.call(a,b)&&(w[b]=a[b]);d(w)};B(a,b)}catch(g){console.error(g)}});l.parentNode.insertBefore(d,l)}}function B(a,l){try{for(var d=m.data,b=0;b<a.length;b++)if("function"===typeof a[b])a[b]();var e=!1,g=c.__SENTRY__;"undefined"!==
+            typeof g&&g.hub&&g.hub.getClient()&&(e=!0);g=!1;for(b=0;b<d.length;b++)if(d[b].f){g=!0;var f=d[b];!1===e&&"init"!==f.f&&l.init();e=!0;l[f.f].apply(l,f.a)}!1===e&&!1===g&&l.init();var h=c[n],k=c[p];for(b=0;b<d.length;b++)d[b].e&&h?h.apply(c,d[b].e):d[b].p&&k&&k.apply(c,[d[b].p])}catch(C){console.error(C)}}for(var f=!0,y=!1,q=0;q<document.scripts.length;q++)if(-1<document.scripts[q].src.indexOf(z)){f="no"!==document.scripts[q].getAttribute("data-lazy");break}var x=!1,h=[],m=function(a){(a.e||a.p||a.f&&
+            -1<a.f.indexOf("capture")||a.f&&-1<a.f.indexOf("showReportDialog"))&&f&&k(h);m.data.push(a)};m.data=[];c[e]=c[e]||{};c[e].onLoad=function(a){h.push(a);f&&!y||k(h)};c[e].forceLoad=function(){y=!0;f&&setTimeout(function(){k(h)})};"init addBreadcrumb captureMessage captureException captureEvent configureScope withScope showReportDialog".split(" ").forEach(function(a){c[e][a]=function(){m({f:a,a:arguments})}});var r=c[n];c[n]=function(a,e,d,b,f){m({e:[].slice.call(arguments)});r&&r.apply(c,arguments)};
+            var t=c[p];c[p]=function(a){m({p:a.reason});t&&t.apply(c,arguments)};f||setTimeout(function(){k(h)})})(window,document,"script","onerror","onunhandledrejection","Sentry","ba45c8ef1423466a91ce8f9a3c49b087","https://static.parastorage.com/unpkg/@sentry/browser@5.7.1/build/bundle.min.js",{"dsn":"https://ba45c8ef1423466a91ce8f9a3c49b087@sentry.wixpress.com/554"});
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+        <script src="//static.parastorage.com/services/js-sdk/1.827.0/js/wix-private.min.js"></script>
+        <link rel="stylesheet" href="//static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+        <script type="text/javascript">
+            var initialState = {"DEMO_URL":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTkGJh6alGDPbYoNpSD2qG7Q1Vnr0UWBHdeg7Diy-avlg4GjpMEpSQkdxZssryQK8TnKCkKmK52A2xa/pub?output=csv","MOBILE":"mobile","SITE_MODE":"site","PREVIEW_MODE":"preview","EDITOR_MODE":"editor","DEFAULT_LANGUAGE":"en","APP_NAME":"myApp","origin":"app_settings","widget_origin":"widget","APP_ID":"134139f3-f2a0-2c2c-693c-ed22165cfd84","dataKeyPrefix":"dataStart","DATA_SOURCE":{"MANUALLY":"csvString","GOOGLE_DOC":"csvUrl"},"MOBILE_LAYOUT":{"EXPAND":"expand","SCROLLING":"scrolling"},"ALIGNMENT":{"LEFT":"ltr","CENTER":"center","RIGHT":"rtl"},"APP_HEIGHT":{"AUTO_MOBILE":"autoMobile","AUTO":"auto"},"data":{"settings":{"title":"","csvUrl":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTpdREVMIqfDL_Tnz-AsY_OOIK76ZqtNE9ZIc-pBBNWJqqReRV848Guc4dex9Kunp7SeANkpltjHn5v/pub?output=csv","origVersion":"","viewType":"table","data":{"csvString":"column 1,column 2,column 3,column 4\n1,2,3,4\n2,3,4,5\n5,4,3,2\n3,5,6,3\n","csvUrl":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTpdREVMIqfDL_Tnz-AsY_OOIK76ZqtNE9ZIc-pBBNWJqqReRV848Guc4dex9Kunp7SeANkpltjHn5v/pub?output=csv","type":"csvUrl"},"tableParams":{"dataSource":"inline","paginate":false,"columns":3,"pageSize":5,"sortable":true,"showHeaderFooter":true,"appHeight":"autoMobile","filter":true,"radius":0,"mobileView":"scrolling","expandIconSize":"default","expandIconStyle":"default","filterText":"Поиск","alignment":"ltr","columnsOnOff":false,"showGradient":false,"innerBorderWidth":1,"outerBorderWidth":1},"baseSiteUrl":"https://editor.wix.com/html/editor/web/renderer/render/document/3e168d98-6a54-4d3a-9136-fb1034c10451"}},"design":{"headerBackgroundColorTop":{"color":{"name":"headerBackgroundColorTop","type":"colorPickerInput","value":"color-1","value2":"color-2"}},"headerBackgroundColorBottom":{"color":{"name":"headerBackgroundColorBottom","type":"colorPickerInput","value":"color-2","value2":"color-3"}},"oddRowBackground":{"color":{"name":"oddRowBackground","type":"colorPickerInput","value":"color-1"}},"evenRowBackground":{"color":{"name":"evenRowBackground","type":"colorPickerInput","value":"color-1"}},"rowHoverBackground":{"color":{"name":"rowHoverBackground","type":"colorPickerInput","value":"color-2"}},"outerBorderColor":{"color":{"name":"outerBorderColor","type":"colorPickerInput","value":"color-3"}},"borderColor":{"color":{"name":"borderColor","type":"colorPickerInput","value":"color-3"}},"outerBorderWidth":{"border":{"name":"outerBorderWidth","type":"slider","min":0,"max":20}},"innerBorderWidth":{"border":{"name":"innerBorderWidth","type":"slider","min":0,"max":20}},"radius":{"radius":{"name":"radius","type":"slider","min":0,"max":40}},"limitColumn":{"limit":{"name":"limitColumn","type":"slider","min":1,"max":100}},"titleBackgroundColor":{"color":{"name":"titleBackgroundColor","type":"colorPickerInput","value":"color-8"}},"columns":{"color":{"name":"titleFontColor","type":"fontAndColorPicker","value":"color-1"},"font":{"name":"titleFontStyle","type":"fontAndColorPicker","value":"Body-L","theme":"font_7","fontMaxSize":100,"startWithSize":14,"hideStyle":false}},"rows":{"color":{"name":"rowFontColor","type":"fontAndColorPicker","value":"color-5"},"font":{"name":"rowFontStyle","type":"fontAndColorPicker","value":"Body-M","theme":"font_8","fontMaxSize":100,"startWithSize":14,"hideStyle":false}}},"defaultSettings":{"title":"","csvUrl":"","origVersion":"","viewType":"table","data":{"csvString":"coluna 1,coluna 2,coluna 3,coluna 4\n1,2,3,4\n2,3,4,5\n5,4,3,2\n3,5,6,3\n","csvUrl":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTkGJh6alGDPbYoNpSD2qG7Q1Vnr0UWBHdeg7Diy-avlg4GjpMEpSQkdxZssryQK8TnKCkKmK52A2xa/pub?output=csv","type":"csvString"},"tableParams":{"dataSource":"inline","paginate":false,"columns":3,"pageSize":5,"sortable":true,"showHeaderFooter":true,"appHeight":"autoMobile","filter":true,"radius":0,"mobileView":"expand","expandIconStyle":"default","expandIconSize":"default","filterText":"Buscar","alignment":"ltr","columnsOnOff":false,"showGradient":false,"innerBorderWidth":1,"outerBorderWidth":1}}};
+            initialState.locationParams = document.location.search;
+        </script>
+        <style wix-style="" type="text/css" ng-non-bindable="">
+    #theTable > tbody {
+        font:normal normal normal 15px/1.4em arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+    }
+
+    #theTable > thead {
+        font:normal normal normal 18px/1.4em barlow-extralight,barlow,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px barlow-extralight,barlow,sans-serif;
+    }
+
+    body {
+        border-color: rgba(176,176,176,1);
+    }
+
+    #theTable > thead > tr > th {
+        color: rgba(45,45,45,1);
+        background-color: rgba(176,176,176,1);
+        background-image: none;
+        vertical-align: top;
+    }
+
+    .sortIcon {
+        fill: rgba(45,45,45,1) !important;
+    }
+    #theTable > thead tr > th{
+        border-color: rgba(176,176,176,1);
+        font:normal normal normal 18px/1.4em barlow-extralight,barlow,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px barlow-extralight,barlow,sans-serif;
+    }
+
+    #theTable > tbody > tr {
+        color: rgba(255,255,255,1);
+    }
+
+    #theTable > tbody > tr > td{
+        font:normal normal normal 15px/1.4em arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+    }
+
+    #theTable > tbody > tr:nth-of-type(odd)  {
+        background-color: rgba(45,45,45,1);
+    }
+
+    #theTable > tbody > tr:nth-of-type(even)  {
+        background-color: rgba(45,45,45,1);
+    }
+
+    .footable > tbody > tr:hover, #theTable > tbody > tr:hover  {
+        background-color: rgba(87,87,87,1);
+    }
+
+
+    .footable,
+    .footable > thead > tr > th,
+    .footable > tbody > tr > td {
+        border-color: rgba(176,176,176,1);
+        border-left-color: rgba(176,176,176,1);
+    }
+
+
+    .filter > thead > tr > th,
+    .footable > thead > tr > th,
+    .footable > thead > tr > td {
+        background-color: rgba(45,45,45,1);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45,45,45,1)), to(    rgba(87,87,87,1)));
+        background-image: -webkit-linear-gradient(top, rgba(45,45,45,1),     rgba(87,87,87,1));
+        background-image: -moz-linear-gradient(top, rgba(45,45,45,1),     rgba(87,87,87,1));
+        background-image: -ms-linear-gradient(top, rgba(45,45,45,1),     rgba(87,87,87,1));
+        background-image: -o-linear-gradient(top, rgba(45,45,45,1),     rgba(87,87,87,1));
+        background-image: linear-gradient(to bottom, rgba(45,45,45,1),     rgba(87,87,87,1));
+    }
+
+
+    .footable > tfoot > tr > th,
+    .footable > tfoot > tr > td {
+        background-color: rgba(45,45,45,1);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(87,87,87,1)
+    ), to(rgba(45,45,45,1)));
+        background-image: -webkit-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -moz-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -ms-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -o-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: linear-gradient(to bottom,rgba(87,87,87,1), rgba(45,45,45,1));
+    }
+
+
+    .mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+    .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+        background-color: rgba(45,45,45,1);
+    }
+
+
+    .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+    .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+        background-color: rgba(45,45,45,1);
+        border: 1px solid rgba(45,45,45,1);
+    }
+    .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{
+        background-color: rgba(45,45,45,1);
+    }
+    #tableWrapper::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 10px;
+        border: 1px solid rgba(176,176,176,1);
+    }
+
+    #tableWrapper::-webkit-scrollbar-track {
+        background-color: rgba(45,45,45,1);
+    }
+
+    #tableWrapper::-webkit-scrollbar-corner {
+        background-color: rgba(45,45,45,1);
+    }
+
+    #tableWrapper::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(45,45,45,1);
+        border: 1px solid rgba(45,45,45,1);
+    }
+
+    #tableWrapper::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(87,87,87,1);
+    }
+    ::-webkit-input-placeholder {
+        color: #000;
+        opacity: 0.5;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: #000;
+        opacity: 0.5;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: #000;
+        opacity: 0.5;
+    }
+
+    :-ms-input-placeholder {
+        color: #000;
+        opacity: 0.5;
+    }
+
+    .footable > tfoot > tr > th,
+    .footable > tfoot > tr > td {
+        background-color: rgba(45,45,45,1);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(87,87,87,1)
+    ), to(rgba(45,45,45,1)));
+        background-image: -webkit-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -moz-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -ms-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: -o-linear-gradient(top,rgba(87,87,87,1), rgba(45,45,45,1));
+        background-image: linear-gradient(to bottom,rgba(87,87,87,1), rgba(45,45,45,1));
+    }
+
+    #theTable.isInnerColor {
+        border-top-color: rgba(176,176,176,1);
+        border-bottom-color: rgba(176,176,176,1);
+    }
+
+    #theTable.isInnerColor {
+        border-right: none;
+        border-left: none;
+    }
+
+    /*
+    .footable-row-detail-name {
+        color: rgba(45,45,45,1);
+        background-color: rgba(176,176,176,1);
+        border: 1px solid rgba(176,176,176,1);
+        font:normal normal normal 18px/1.4em barlow-extralight,barlow,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px barlow-extralight,barlow,sans-serif;
+    }
+
+    .footable-row-detail-value {
+        border: 1px solid rgba(176,176,176,1);
+        font:normal normal normal 15px/1.4em arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+    }
+
+    .footable-sort-indicator {
+        font:normal normal normal 15px/1.4em arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+        font-size: 14px;
+        font:normal normal normal 14px/17px arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif;
+    }
+
+    tr.footableEven + tr.footable-row-detail > td > div > table > tbody > tr > td.footable-row-detail-value {
+        background-color: rgba(45,45,45,1);
+    }
+
+    .footable .pagination > ul > li > a {
+        border-color: rgba(176,176,176,1);
+    }
+
+    .footable > thead > tr > th,
+    .footable > thead > tr > td {
+        background-color: rgba(87,87,87,1);
+    }
+
+    .footable .pagination > ul > .disabled > span,
+    .footable .pagination > ul > .disabled > a,
+    .footable .pagination > ul > .disabled > a:hover,
+    .footable .pagination > ul > .disabled > a:focus {
+        background-color: rgba(45,45,45,1);
+    }
+
+    .footable .pagination > ul > li > a:hover,
+    .footable .pagination > ul > li > a:focus,
+    .footable .pagination > ul > .active > a,
+    .footable .pagination > ul > .active > span {
+        background-color: rgba(87,87,87,1);
+    }
+    .option {
+        width: 120px;
+    }
+*/
+</style>
+
+    <style wix-style="">.Title{ font:normal normal normal 28px/1.4em barlow-extralight,barlow,sans-serif; } .Menu{ font:normal normal normal 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } .Page-title{ font:normal normal normal 20px/1.4em barlow-medium,barlow,sans-serif; } .Heading-XL{ font:normal normal normal 78px/1.4em barlow-medium,barlow,sans-serif; } .Heading-L{ font:normal normal normal 50px/1.4em barlow-medium,barlow,sans-serif; } .Heading-M{ font:normal normal normal 36px/1.4em barlow-extralight,barlow,sans-serif; } .Heading-S{ font:normal normal normal 24px/1.4em barlow-medium,barlow,sans-serif; } .Body-L{ font:normal normal normal 18px/1.4em barlow-extralight,barlow,sans-serif; } .Body-M{ font:normal normal normal 15px/1.4em arial,ｍｓ ｐゴシック,ms pgothic,돋움,dotum,helvetica,sans-serif; } .Body-S{ font:normal normal normal 13px/1.4em barlow-extralight,barlow,sans-serif; } .Body-XS{ font:normal normal normal 12px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } }</style><link type="text/css" rel="stylesheet" href="//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googleAPI/css?family=Barlow:n,b,i,bi|Barlow:n,b,i,bi|&amp;subset=cyrillic,latin" id="wix-google-fonts"><link type="text/css" rel="stylesheet" href="https://static.parastorage.com/services/santa-resources/dist/viewer/user-site-fonts/v19/languages-woff2.css"><link type="text/css" rel="stylesheet" href="https://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/v16/wixMadefor.css"><style type="text/css" id="myStyleInjectundefined">.footable > tbody > tr > td,.footable > thead > tr > th{border-style: solid;border-left-width:1px !important;border-top-width:1px !important;}.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {border-style: solid;}body{border-width:1px; border-style: solid;}body{ -moz-border-radius:0px;-webkit-border-radius: 0px;border-radius: 0px;}.footer > tfoot > tr > td{ -moz-border-radius: 0 0 0px 0px;-webkit-border-radius: 0 0 0px 0px;border-radius: 0 0 0px 0px;}.footer {-moz-border-radius: 0 0 0px 0px;-webkit-border-radius: 0 0 0px 0px;border-radius: 0 0 0px 0px;}.filter > thead > tr:first-child > th{-moz-border-radius: 0px 0px 0 0;-webkit-border-radius: 0px 0px 0 0;border-radius: 0px 0px 0 0;}.filter {-moz-border-radius: 0px 0px 0 0;-webkit-border-radius: 0px 0px 0 0;border-radius: 0px 0px 0 0;}.searchBox{margin: 0 5px; }.filter>thead>tr>th, .footable>thead>tr>th, .footable>thead>tr>td, .footable>tfoot>tr>th, .footable>tfoot>tr>td { background-image:none; background-color:rgba(45,45,45,1);}.footable>tfoot>tr>th, .footable>tfoot>tr>td { background-color:rgba(45,45,45,1);}.footable-filtering-search {float: right}#theTable > thead > tr > th, #theTable > tbody > tr > td {text-align: left}#filterBox .form-control{text-align: left}#theTable > tbody > tr.footable-empty > td { height:100px; text-align: center !important;}#theTable > tbody > tr.footable-empty:hover { background: transparent !important;}#theTable > tbody > tr.textCenter > td { vertical-align: middle; height:100px; text-align:center !important;}#theTable > thead > tr > th.textCenter { text-align:center !important;}#theTable > tbody > tr.textCenter:hover { background: transparent !important;}.footable , .filter { font-size:14px;}body { border-width: 1px; border-style: solid;}#theTable{border-right-width:0;border-left-width:0;}#theTable > thead > tr > th, #theTable > tbody > tr > td{border-width:1px}.footable > tbody > tr > td,.footable > thead > tr > th { border-left-width:1px; border-top-width: 1px;}#theTable { border-top-width:1px; border-bottom-width:1px; border-style:solid; }</style><style>:focus {
+    outline: none;
+}
+
+.js-focus-visible .focus-visible:focus,
+.js-focus-visible .focus-visible:focus ~ .wixSdkShowFocusOnSibling
+{
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC;
+}
+</style><script src="https://static.parastorage.com/unpkg/focus-visible@4.1.1/dist/focus-visible.min.js" id="dynamic_script_FOCUS_VISIBLE"></script></head>
+    <body class="js-focus-visible">
+        <!-- ngView: --><div id="appContainer" role="application" tabindex="-1" aria-label="" ng-view="" class="app ng-scope" ng-controller="HomeController as main"><section class="main-error ng-scope ng-hide" ng-show="main.hasError">
+  <div class="error ng-hide" ng-show="main.isEditorMode">
+    <div class="errorTitle ng-binding" ng-bind="main.errorTitle"></div>
+    <div class="errorData ng-binding" ng-bind="main.errorBody"></div>
+  </div>
+
+  <div class="error" ng-show="!main.isEditorMode">
+    <div class="errorTitle ng-binding" ng-bind="main.errorTitleSiteMode"></div>
+    <div class="errorData ng-binding" ng-bind="main.errorBodySiteMode"></div>
+  </div>
+</section>
+
+<!-- ngIf: !main.hasError --><section class="main-content ng-scope show-sortable" ng-if="!main.hasError" ng-class="{'show-sortable': main.settings.tableParams.sortable}">
+  <div footable="" class="direction-right" style="height: 100%; width:100%; display: block" data-settings="main.settings" data-instance-id="main.instanceId" data-comp-id="main.compId" data-fixed-height="main.isFixedHeight()" data-filter-position="main.getFilterPosition()"><!-- ngIf: fixedHeight --><div class="fixed-height-view ng-scope" fixed-height-view="" ng-if="fixedHeight"><div class="main-container">
+  <div class="box box-header" ng-show="settings.tableParams.showHeaderFooter &amp;&amp; !isEmptyTable">
+    <section style="width:100%;">
+      <table id="filterTable" class="filter outerBorder" style="width:100%;">
+        <thead>
+        <tr>
+          <th colspan="100%" style="height:37px;text-align: center;">
+            <div id="filterBox" ng-show="settings.tableParams.filter" class="footable-filtering-external footable-filtering-right"><form class="form-inline"><div class="form-group1 footable-filtering-search"><div class="input-group"><input type="text" class="form-control" placeholder="Поиск"></div></div></form></div>
+          </th>
+        </tr>
+        </thead>
+      </table>
+    </section>
+  </div>
+  <div class="box box-data">
+    <div fixed-scrollbars="" class="fixed-scrollbars ng-isolate-scope mCustomScrollbar _mCS_1" data-settings="settings" style="height: 2862px;"><div id="mCSB_1" class="mCustomScrollBox mCS-dark-3 mCSB_vertical_horizontal mCSB_inside" tabindex="0" style="max-height: none;"><div id="mCSB_1_container_wrapper" class="mCSB_container_wrapper mCS_x_hidden mCS_no_scrollbar_x"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr">
+      <div id="tableWrapper">
+        <table id="theTable" style="width: 100%; display: table;" dir="auto" data-paging="false" data-cascade="true" data-filter-min="3" data-paging-size="5" data-useparentwidth="true" data-filter-container="#filterBox" data-filter-connectors="false" data-use-parent-width="false" data-sorting="true" data-filtering="true" data-filter-filters="[]" data-filter-placeholder="Поиск" data-filter-position="right" data-show-header="true" ng-class="{'empty-table':isEmptyTable}" class="footable table outerBorder footable-1 footable-filtering footable-filtering-right breakpoint-x-small"><thead><tr class="footable-header"><th class="wixColumns footable-sortable footable-first-visible" style="display: table-cell;">№<span class="fooicon fooicon-sort"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="09-Icons-/-Sort-/-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="sortIcon" d="M8.5,4 L8.499,18.222 L11.3744945,15.6 L12,16.3614292 L8.0075336,20 L4,16.3620683 L4.62006266,15.6 L7.499,18.214 L7.5,4 L8.5,4 Z" id="🎨-Color" fill="#000000" transform="translate(8.000000, 12.000000) rotate(180.000000) translate(-8.000000, -12.000000) "></path>
+        <path class="sortIcon" d="M16.5,4 L16.499,18.222 L19.3744945,15.6 L20,16.3614292 L16.0075336,20 L12,16.3620683 L12.6200627,15.6 L15.499,18.214 L15.5,4 L16.5,4 Z" id="🎨-Color" fill="#000000"></path>
+    </g>
+</svg></span></th><th class="wixColumns footable-sortable" style="display: table-cell;">Исполнитель<span class="fooicon fooicon-sort"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="09-Icons-/-Sort-/-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="sortIcon" d="M8.5,4 L8.499,18.222 L11.3744945,15.6 L12,16.3614292 L8.0075336,20 L4,16.3620683 L4.62006266,15.6 L7.499,18.214 L7.5,4 L8.5,4 Z" id="🎨-Color" fill="#000000" transform="translate(8.000000, 12.000000) rotate(180.000000) translate(-8.000000, -12.000000) "></path>
+        <path class="sortIcon" d="M16.5,4 L16.499,18.222 L19.3744945,15.6 L20,16.3614292 L16.0075336,20 L12,16.3620683 L12.6200627,15.6 L15.499,18.214 L15.5,4 L16.5,4 Z" id="🎨-Color" fill="#000000"></path>
+    </g>
+</svg></span></th><th class="wixColumns footable-sortable footable-last-visible" style="display: table-cell;">Песня<span class="fooicon fooicon-sort"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="09-Icons-/-Sort-/-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="sortIcon" d="M8.5,4 L8.499,18.222 L11.3744945,15.6 L12,16.3614292 L8.0075336,20 L4,16.3620683 L4.62006266,15.6 L7.499,18.214 L7.5,4 L8.5,4 Z" id="🎨-Color" fill="#000000" transform="translate(8.000000, 12.000000) rotate(180.000000) translate(-8.000000, -12.000000) "></path>
+        <path class="sortIcon" d="M16.5,4 L16.499,18.222 L19.3744945,15.6 L20,16.3614292 L16.0075336,20 L12,16.3620683 L12.6200627,15.6 L15.499,18.214 L15.5,4 L16.5,4 Z" id="🎨-Color" fill="#000000"></path>
+    </g>
+</svg></span></th></tr></thead><tbody><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">1&nbsp;</td><td class="wixColumns" style="display: table-cell;">Артур Пирожков&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Зацепила (...меня, ослепила меня, до порога довела…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">2&nbsp;</td><td class="wixColumns" style="display: table-cell;">Артур Пирожков&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Алкоголичка (Не смотря на милое личико…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">3&nbsp;</td><td class="wixColumns" style="display: table-cell;">Баста&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Выпускной (Медлячок, чтобы ты заплакала…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">4&nbsp;</td><td class="wixColumns" style="display: table-cell;">Би-2&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Дурочка (А ты танцуй, дурочка танцуй…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">5&nbsp;</td><td class="wixColumns" style="display: table-cell;">Би-2&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Её глаза (Где-то ангелы кричат…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">6&nbsp;</td><td class="wixColumns" style="display: table-cell;">Би-2&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Лайки (Ты так прекрасна моя любовь…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">7&nbsp;</td><td class="wixColumns" style="display: table-cell;">Би-2 + Brainstorm&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Скользкие улицы (...иномарки целуются...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">8&nbsp;</td><td class="wixColumns" style="display: table-cell;">Браво&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Любите девушки (...простых романтиков...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">9&nbsp;</td><td class="wixColumns" style="display: table-cell;">Браво&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Этот город (...самый лучший город на земле…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">10&nbsp;</td><td class="wixColumns" style="display: table-cell;">Браво&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Я - то, что надо (Дай мне этот день, дай мне эту ночь…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">11&nbsp;</td><td class="wixColumns" style="display: table-cell;">Братья Грим&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Кустурица (Сегодня и ты после фильма Кустурицы…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">12&nbsp;</td><td class="wixColumns" style="display: table-cell;">Бумбокс&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Вахтёрам (Я помню белые обои, чёрная посуда)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">13&nbsp;</td><td class="wixColumns" style="display: table-cell;">Валентин Стрыкало&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Ялта, парус (…в этом мире только мы одни)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">14&nbsp;</td><td class="wixColumns" style="display: table-cell;">Гарик Сукачёв&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Моя бабушка курит трубку&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">15&nbsp;</td><td class="wixColumns" style="display: table-cell;">Градусы&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Кто ты? (Кто-то на балконе повис…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">16&nbsp;</td><td class="wixColumns" style="display: table-cell;">Гриша Ургант&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Пиротехника (Фильмы закончились классные…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">17&nbsp;</td><td class="wixColumns" style="display: table-cell;">Дискотека Авария&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Новогодняя&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">18&nbsp;</td><td class="wixColumns" style="display: table-cell;">Дискотека Авария&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Небо (Свет далеких планет…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">19&nbsp;</td><td class="wixColumns" style="display: table-cell;">Егор Крид&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Самая-самая (О боже мама, мама…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">20&nbsp;</td><td class="wixColumns" style="display: table-cell;">Женя Белоусов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Девчонка-девчоночка&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">21&nbsp;</td><td class="wixColumns" style="display: table-cell;">Жуки&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Батарейка (Холодный ветер с дождём..)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">22&nbsp;</td><td class="wixColumns" style="display: table-cell;">Жуки&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Танкист (…какой ты нафиг танкист...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">23&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Всё, что тебя касается&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">24&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Если ты скажешь да (Мир такой красивый...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">25&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Капканы (Ты ставишь втихаря капканы на баранов...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">26&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Напитки покрепче (Напитки покрепче, слова покороче…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">27&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Районы-Кварталы&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">28&nbsp;</td><td class="wixColumns" style="display: table-cell;">Звери&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Танцуй (Танцуй для меня, только для меня танцуй...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">29&nbsp;</td><td class="wixColumns" style="display: table-cell;">Земляне&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Трава у дома&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">30&nbsp;</td><td class="wixColumns" style="display: table-cell;">Из кинофильмов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Звенит январская вьюга (из к/ф «Иван Васильевич меняет профессию)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">31&nbsp;</td><td class="wixColumns" style="display: table-cell;">Из кинофильмов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Позвони мне, позвони (из к/ф «Карнавал», рок-версия)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">32&nbsp;</td><td class="wixColumns" style="display: table-cell;">Из кинофильмов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Расскажи, Снегурочка (из м/ф «Ну, погоди!», рок-версия)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">33&nbsp;</td><td class="wixColumns" style="display: table-cell;">Из кинофильмов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Снежинка (из к/ф «Чародеи», рок-версия)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">34&nbsp;</td><td class="wixColumns" style="display: table-cell;">Каста&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Закрытый космос (Я будто выпал из сна…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">35&nbsp;</td><td class="wixColumns" style="display: table-cell;">Кино&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Мама-Анархия (Веселая версия)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">36&nbsp;</td><td class="wixColumns" style="display: table-cell;">Король и Шут&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Дурак и молния (Грохочет гром, сверкает молния в ночи)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">37&nbsp;</td><td class="wixColumns" style="display: table-cell;">Король и Шут&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Лесник (Будь как дома, путник…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">38&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ленинград&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">WWW (... Ленинград spb точка ru...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">39&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ленинград&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Вояж (На фоне Эйфелевой башни...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">40&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ленинград&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Экспонат (На лабутенах…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">41&nbsp;</td><td class="wixColumns" style="display: table-cell;">Леонид Агутин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">На сиреневой луне (Ты забудешь обо мне...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">42&nbsp;</td><td class="wixColumns" style="display: table-cell;">Леприконсы&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Хали-гали (...«Паратрупер», нам с тобою было супер…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">43&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ляпис Трубецкой&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">В платье белом (Знай, это любовь, с ней рядом Амур...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">44&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ляпис Трубецкой&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Евпатория (Я тебя не скоро позабуду…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">45&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ляпис Трубецкой&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Капитал&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">46&nbsp;</td><td class="wixColumns" style="display: table-cell;">Ляпис Трубецкой&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Я верю (…в Иисуса Христа…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">47&nbsp;</td><td class="wixColumns" style="display: table-cell;">Мумий Тролль&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Владивосток 2000 (Уходим, уходим, уходим...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">48&nbsp;</td><td class="wixColumns" style="display: table-cell;">Мумий Тролль&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Королева рока&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">49&nbsp;</td><td class="wixColumns" style="display: table-cell;">Мумий Тролль&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Медведица (Мерещится то ли большая, то ли малая медведица…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">50&nbsp;</td><td class="wixColumns" style="display: table-cell;">Мумий Тролль&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Невеста (Как же тебе повезло, моей невесте…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">51&nbsp;</td><td class="wixColumns" style="display: table-cell;">Мумий Тролль&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Это по любви (Поцелуями, нежными ли, нижними ли…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">52&nbsp;</td><td class="wixColumns" style="display: table-cell;">Муслим Магомаев&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Королева красоты&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">53&nbsp;</td><td class="wixColumns" style="display: table-cell;">Муслим Магомаев&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Свадьба&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">54&nbsp;</td><td class="wixColumns" style="display: table-cell;">Олег Газманов&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Морячка (Ты морячка - я моряк...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">55&nbsp;</td><td class="wixColumns" style="display: table-cell;">Руки Вверх&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">18 мне уже (Забирай меня скорей…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">56&nbsp;</td><td class="wixColumns" style="display: table-cell;">Секрет&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Я люблю буги-вуги&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">57&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Англо-русский словарь (Давай, Лама, давай…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">58&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Весь этот бред (Я умираю от скуки, когда меня кто-то лечит)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">59&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Выхода нет&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">60&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Мое сердце&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">61&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Орбит без сахара&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">62&nbsp;</td><td class="wixColumns" style="display: table-cell;">Сплин&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Романс (И лампа не горит, и врут календари…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">63&nbsp;</td><td class="wixColumns" style="display: table-cell;">Танцы Минус&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Половинка (У ночного огня, под огромной луной...)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">64&nbsp;</td><td class="wixColumns" style="display: table-cell;">Тату&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Я сошла с ума&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">65&nbsp;</td><td class="wixColumns" style="display: table-cell;">Тима Белорусских&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Витаминка&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">66&nbsp;</td><td class="wixColumns" style="display: table-cell;">Хабиб&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Ягода-малинка (...о-о-о! Крутит головой, залетает в топ)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">67&nbsp;</td><td class="wixColumns" style="display: table-cell;">Чайф&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">17 лет (Пусть всё будет…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">68&nbsp;</td><td class="wixColumns" style="display: table-cell;">Чайф&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Аргентина-Ямайка (Какая боль, какая боль...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">69&nbsp;</td><td class="wixColumns" style="display: table-cell;">Чайф&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Не со мной (Собираю марки от чужих конвертов…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">70&nbsp;</td><td class="wixColumns" style="display: table-cell;">Чайф&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Ой-ё (От старых друзей весточки нет…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">71&nbsp;</td><td class="wixColumns" style="display: table-cell;">ЧИЖ&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">О любви (А не спеть ли мне песню…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">72&nbsp;</td><td class="wixColumns" style="display: table-cell;">Элджей &amp; Feduk&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Розовое вино (Здесь так красиво, я перестаю дышать…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">73&nbsp;</td><td class="wixColumns" style="display: table-cell;">Animal Jazz&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Три полоски (Джинсы порезаны, лето…)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">74&nbsp;</td><td class="wixColumns" style="display: table-cell;">Black eyed peas&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Let's get it started&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">75&nbsp;</td><td class="wixColumns" style="display: table-cell;">Bon Jovi&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">It's my life&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">76&nbsp;</td><td class="wixColumns" style="display: table-cell;">Bruno Mars + Mark Ronson&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Uptown Funk!&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">77&nbsp;</td><td class="wixColumns" style="display: table-cell;">Chuck Berry&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Johnny B. Goode (Рок-н-ролл из к/ф «Назад в будущее»)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">78&nbsp;</td><td class="wixColumns" style="display: table-cell;">Dabro &nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Юность (Звук поставим на всю и соседи не спят)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">79&nbsp;</td><td class="wixColumns" style="display: table-cell;">Defoliant&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Держи меня крепче (из к/ф «Любовь в большом городе»)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">80&nbsp;</td><td class="wixColumns" style="display: table-cell;">Depeche Mode&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Enjoy the silence&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">81&nbsp;</td><td class="wixColumns" style="display: table-cell;">Depeche Mode&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Personal Jesus&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">82&nbsp;</td><td class="wixColumns" style="display: table-cell;">Feduk&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Хлопья летят наверх&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">83&nbsp;</td><td class="wixColumns" style="display: table-cell;">Frank Sinatra&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Let it snow&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">84&nbsp;</td><td class="wixColumns" style="display: table-cell;">Frank Sinatra&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Jingle Bells (рок-н-ролл версия)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">85&nbsp;</td><td class="wixColumns" style="display: table-cell;">Galibri &amp; Mavik&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Федерико Феллини (Я как Федерико Фелинни, дайте Оскар этой богине)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">86&nbsp;</td><td class="wixColumns" style="display: table-cell;">Gayazov$ brother$&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Малиновая Лада (...малиновый закат, хотела на Канары, а везут тебя...)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">87&nbsp;</td><td class="wixColumns" style="display: table-cell;">George Harrison&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">I've Got My Mind Set On You&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">88&nbsp;</td><td class="wixColumns" style="display: table-cell;">Green Day&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Boulevard of broken dreams&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">89&nbsp;</td><td class="wixColumns" style="display: table-cell;">JONY&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Комета&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">90&nbsp;</td><td class="wixColumns" style="display: table-cell;">Little BIG&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Go bananas (I’m banana man)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">91&nbsp;</td><td class="wixColumns" style="display: table-cell;">Little BIG&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Faradenza (медленная версия)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">92&nbsp;</td><td class="wixColumns" style="display: table-cell;">Lustra&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Scotty doesn’t know (из к/ф «Евротур»)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">93&nbsp;</td><td class="wixColumns" style="display: table-cell;">Maroon 5&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">This Love&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">94&nbsp;</td><td class="wixColumns" style="display: table-cell;">MONATIK&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Кружит (...голову, ай, до упаду)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">95&nbsp;</td><td class="wixColumns" style="display: table-cell;">Michel Teló&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Nosa, nosa (Ai Se Eu Te Pego)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">96&nbsp;</td><td class="wixColumns" style="display: table-cell;">Muse&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Plug in baby&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">97&nbsp;</td><td class="wixColumns" style="display: table-cell;">NILETTO&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Любимка (Время пострелять, между нами пальба)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">98&nbsp;</td><td class="wixColumns" style="display: table-cell;">Quest Pistols&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Ты так красива (Ты так красива, невыносимо…)&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">99&nbsp;</td><td class="wixColumns" style="display: table-cell;">RASA&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Пчеловод (Ты - пчела, я - пчеловод)&nbsp;</td></tr><tr class="footableOdd"><td class="wixColumns footable-first-visible" style="display: table-cell;">100&nbsp;</td><td class="wixColumns" style="display: table-cell;">The Beatles&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Twist and Shout&nbsp;</td></tr><tr class="footableEven"><td class="wixColumns footable-first-visible" style="display: table-cell;">101&nbsp;</td><td class="wixColumns" style="display: table-cell;">Zdob si Zdub&nbsp;</td><td class="wixColumns footable-last-visible" style="display: table-cell;">Видели ночь (…гуляли всю ночь до утра…)&nbsp;</td></tr></tbody></table>
+      </div>
+    </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; display: block;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_horizontal" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+  </div>
+  <div class="box box-footer" ng-show="settings.tableParams.showHeaderFooter">
+    <section style="width:100%;margin:0;">
+      <table id="pagerFilter" class="footable footer outerBorder" style="width:100%;margin:0;">
+        <tfoot id="noPager">
+        <tr>
+          <td colspan="100%" style="height:26px;"></td>
+        </tr>
+        </tfoot>
+      </table>
+    </section>
+  </div>
+</div>
+</div><!-- end ngIf: fixedHeight -->
+<!-- ngIf: !fixedHeight -->
+</div>
+</section><!-- end ngIf: !main.hasError -->
+
+
+
+</div>
+        <script src="scripts/index.js"></script>
+    
+
+
+</body></html>

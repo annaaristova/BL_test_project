@@ -18,9 +18,17 @@ public class WeddingPageSteps {
     @Step("Check that price buttons are enabled")
     public void priceBtns(){
         $(new WeddingPage().onWeddingsForm().priceBtnOne)
-                .shouldBe(enabled);
+                .shouldBe(enabled).scrollIntoView(false);
         $(new WeddingPage().onWeddingsForm().priceBtnTwo)
                 .shouldBe(enabled);
     }
     
+    @Step("Check that learn more button is enabled and learn more division is"
+            + "visible")
+    public void learnMore(){
+        $(new WeddingPage().onWeddingsForm().learnMoreBtn)
+                .shouldBe(enabled).scrollIntoView(false);
+        $(new WeddingPage().onWeddingsForm().learnMoreDiv)
+                .shouldBe(visible);
+    }           
 }

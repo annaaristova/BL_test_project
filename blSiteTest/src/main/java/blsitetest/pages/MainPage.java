@@ -2,14 +2,14 @@
 package blsitetest.pages;
 
 import blsitetest.forms.HeaderForm;
-import blsitetest.forms.PricesDiv;
+import blsitetest.forms.MainPageForm;
 
 public class MainPage {
     public HeaderForm onHeaderForm(){
         return new HeaderForm();
     }
     
-    public PricesDiv onPricesDiv(){
-        return new PricesDiv();
+    public MainPageForm onMainPageForm(){
+        return new MainPageForm();
     }
 }

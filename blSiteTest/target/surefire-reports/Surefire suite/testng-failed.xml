@@ -3,11 +3,11 @@
 <suite verbose="0" name="Failed suite [Surefire suite]">
   <test thread-count="5" verbose="0" name="Surefire test(failed)">
     <classes>
-      <class name="specs.HomeTest">
+      <class name="specs.RepertoireTest">
         <methods>
-          <include name="testPrices"/>
+          <include name="songsDescOrder"/>
         </methods>
-      </class> <!-- specs.HomeTest -->
+      </class> <!-- specs.RepertoireTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
